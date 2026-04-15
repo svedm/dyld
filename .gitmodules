@@ -1,0 +1,9 @@
+[submodule "vendor/xnu"]
+	path = vendor/xnu
+	url = https://github.com/apple-oss-distributions/xnu.git
+[submodule "vendor/libplatform"]
+	path = vendor/libplatform
+	url = https://github.com/apple-oss-distributions/libplatform.git
+[submodule "vendor/libpthread"]
+	path = vendor/libpthread
+	url = https://github.com/apple-oss-distributions/libpthread.git
