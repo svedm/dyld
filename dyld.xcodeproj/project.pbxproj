@@ -8231,7 +8231,7 @@
 				);
 				IS_ZIPPERED = "";
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = (
 					./dyld,
@@ -8282,7 +8282,7 @@
 					./ld,
 				);
 				IS_ZIPPERED = "";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = (
 					./dyld,

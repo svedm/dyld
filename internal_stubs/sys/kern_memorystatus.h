@@ -1,0 +1,3 @@
+#ifndef _SYS_KERN_MEMORYSTATUS_H_
+#define _SYS_KERN_MEMORYSTATUS_H_
+#endif

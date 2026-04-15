@@ -1,0 +1,3 @@
+#ifndef _MACHINE_CPU_CAPABILITIES_H_
+#define _MACHINE_CPU_CAPABILITIES_H_
+#endif

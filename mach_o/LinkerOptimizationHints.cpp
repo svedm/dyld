@@ -121,7 +121,7 @@ static Error validFPAC(const char* name, std::span<const uint64_t> addrs,
 
 Error LinkerOptimizationHints::valid(std::span<const MappedSegment> segments, uint64_t loadAddress) const
 {
-
+    Error lohErr = Error::none();
     return std::move(lohErr);
 }
 

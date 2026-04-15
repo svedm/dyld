@@ -24,6 +24,9 @@ WARNING_CFLAGS = $(ENABLE_ATP_WERROR_$(RC_ProjectCanonicalSourceVersion)) -Wmost
 OTHER_CFLAGS[arch=arm64e] = -Xclang -target-feature -Xclang +mte $(inherited)
 // #endif
 
+// Public SDK build: add internal header stubs and vendor submodule paths
+OTHER_CFLAGS = $(inherited) -DDYLD_EXCLAVEKIT_UNAVAILABLE= -DPLATFORM_IOSMAC=6 -DSUPPORT_ARCH_arm64e=1 -DSUPPORT_ARCH_arm64_32=1 -isystem $(SRCROOT)/internal_stubs -isystem $(SRCROOT)/vendor/libplatform/private -idirafter $(SRCROOT)/vendor/xnu/EXTERNAL_HEADERS -idirafter $(SRCROOT)/vendor/xnu/bsd
+
 // clang optimization level
 GCC_OPTIMIZATION_LEVEL[config=Debug] = 0
 GCC_OPTIMIZATION_LEVEL[config=Release] = s
@@ -85,7 +88,7 @@ TRUSTED_CODE_SIGN_IDENTITY = $(DYLD_SIGNING_IDENTITY_$(DYLD_USE_AMFI_TRUSTED_KEY
 CODE_SIGN_IDENTITY = -
 CODE_SIGN_STYLE = Automatic
 
-SDKROOT = macosx.internal
+SDKROOT = macosx
 
 DEBUG_INFORMATION_FORMAT[config=Debug] = dwarf
 DEBUG_INFORMATION_FORMAT[config=Release] = dwarf-with-dsym
